@@ -366,7 +366,7 @@ img {
   content: "";
   display: block;
   background: white;
-  background-image: url("../images/bg-5.jpeg");
+  background-image: url(../images/bg-5.jpeg);
   background-size: cover;
   grid-column: 2/-1;
   grid-row: 2/-1;
