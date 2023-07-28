@@ -308,6 +308,7 @@ img {
 #about{
   padding-top: 0px;
   padding-bottom: 0px;
+  
 }
 
 :root {
@@ -325,13 +326,16 @@ img {
     var(--indent) var(--indent) calc(10 * var(--indent)) calc(5 * var(--indent))
     var(--indent);
   max-width: 60rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-image: url("../images/bg-5.jpeg");
 }
 
 .card::before {
   content: "";
   display: block;
   background: white;
-  background-image: url(../images/bg-5.jpeg);
+  background-image: url("../images/bg-5.jpeg");
   background-size: cover;
   grid-column: 2/-1;
   grid-row: 2/-1;
@@ -350,10 +354,10 @@ img {
 .image{
   grid-column: 4/5;
   grid-row: 3/3;
-  box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5);
+  /* box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5); */
   object-fit: cover;
   aspect-ratio: 1 / 1;
-  border-radius: 10%;
+  border-radius: 12%;
 }
 
 .box {
@@ -371,7 +375,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 12px;
   backface-visibility: hidden; /* Hides the backface of the elements */
   transition: transform 0.8s ease; /* Smooth transition for flipping effect */
 }
@@ -992,10 +996,11 @@ background-color: #4c49ea;
   .body{
     max-width: 560px;
   }
-  
+
   #about {
     padding-top: 0px;
     padding-bottom: 0px;
+    background-image: none;
   }
   
   :root {
@@ -1015,6 +1020,7 @@ background-color: #4c49ea;
   
     .card::before,
     .card::after {
+      box-sizing: border-box;
       /* Hide the background images for small screens */
       background-image: none;
     }
