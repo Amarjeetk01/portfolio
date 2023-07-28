@@ -7,6 +7,7 @@ body, h1, h2, p, ul, li {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  
 }
 a{
   text-decoration: none;
@@ -71,7 +72,7 @@ box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow when t
 .icon{
   height: 50px;
   width: 50px;
-  position: relative;
+  /* position: relative; */
   position: absolute;
   top: 72%;
   left: 52%;
@@ -137,28 +138,7 @@ header nav ul li a:hover {
   color: #bbb;
 }
 
-@media (max-width: 767px) {
-  .top-header {
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      height: auto;
-  }
 
-  .icon {
-      position: static;
-      margin-top: 10px;
-      margin-left: 0;
-  }
-
-  .header-intro {
-      margin-top: 20px;
-  }
-
-  .header-title h1 {
-      font-size: 40px;
-  }
-}
 
 /* For medium screens (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -334,21 +314,6 @@ img {
   --indent: 0;
 }
 
-@media screen and (min-width: 40rem) {
-  :root {
-    --indent: clamp(2rem, 8vw, 1rem);
-  }
-}
-@media screen and (max-width: 767px) {
-  /* For small screens (e.g., smartphones) */
-  .card {
-    grid-template-columns: 1fr; /* Change the grid layout to a single column */
-  }
-}
-
-
-
-
 
 .card {
   margin: 2rem;
@@ -366,7 +331,7 @@ img {
   content: "";
   display: block;
   background: white;
-  background-image: url("/images/bg-5.jpeg");
+  background-image: url(../images/bg-5.jpeg);
   background-size: cover;
   grid-column: 2/-1;
   grid-row: 2/-1;
@@ -389,81 +354,6 @@ img {
   object-fit: cover;
   aspect-ratio: 1 / 1;
   border-radius: 10%;
-}
-
-.image-card {
-  position: relative;
-  width: 100px;
-  aspect-ratio: 16/9;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.image-card img {
-  width: 48px;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.img-card__image {
-  width: 100%;
-  height: 100%;
-}
-
-.img-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.img-card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.image-card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.img-card__title {
-  margin: 0;
-  font-size: 20px;
-  color: #333;
-  font-weight: 700;
-}
-
-.image-card:hover img {
-  scale: 0;
-}
-
-.card__description {
-  margin: 10px 0 10px;
-  font-size: 12px;
-  color: #777;
-  line-height: 1.4;
-}
-
-.img-card__button {
-  padding: 15px;
-  border-radius: 8px;
-  background: #777;
-  border: none;
-  color: white;
 }
 
 .box {
@@ -596,7 +486,7 @@ position: relative;
 overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 560px) {
   /* For small screens (e.g., smartphones) */
   .certification-bg {
     padding: 150px; /* Adjust the padding to fit the content */
@@ -724,19 +614,6 @@ left: -3rem;
 input:checked + input ~ input:before {
 display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*styles for Projects Section */
 
@@ -917,6 +794,9 @@ left: 30px;
 bottom: 0px;
 
 }
+.date-container p{
+  font-size: 15px;
+}
 
 
 
@@ -1018,29 +898,6 @@ background-color: #4c49ea;
 }
 }
 
-@media only screen and (max-width: 767px) {
-.ag-format-container {
-  width: 96%;
-}
-}
-
-@media only screen and (max-width: 639px) {
-.ag-courses_item {
-  flex-basis: 100%;
-}
-.ag-courses-item_title {
-  min-height: 72px;
-  line-height: 1;
-  font-size: 24px;
-}
-.ag-courses-item_link {
-  padding: 22px 40px;
-}
-}
-
-
-
-
 
 
 
@@ -1109,3 +966,129 @@ background-color: #4c49ea;
   content: "\f099";
 }
 
+/* responsive area code */
+
+@media screen and (max-width: 560px) {
+  .icon{
+    position: absolute;
+    top: 86%;
+    left: 57%;
+  }
+  .top-header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.header-intro {
+    margin-top: 20px;
+}
+
+.header-title h1 {
+    font-size: 40px;
+}
+  .body{
+    max-width: 560px;
+  }
+  
+  #about {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  :root {
+    --indent: 0;
+  }
+  
+    .card {
+      display: grid;
+      grid-template-columns: 1fr; /* Change the grid layout to a single column */
+    }
+  
+    .image {
+      grid-column: 1/2; /* Move the image back to the first column */
+      grid-row: 1/2;
+      margin-bottom: 1rem;
+    }
+  
+    .card::before,
+    .card::after {
+      /* Hide the background images for small screens */
+      background-image: none;
+    }
+  
+    .box {
+      
+      width: 100%; /* Adjust the box width to fit the screen */
+      height: 100%;
+      position: relative;
+      border-radius: 12px;
+      perspective: 1000px;
+    }
+    .box-front,
+    .box-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden; /* Hides the backface of the elements */
+      transition: transform 0.8s ease; /* Smooth transition for flipping effect */
+    }
+    .box-front {
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box-back {
+      background-color: #fff;
+      transform: rotateY(180deg); /* Initially flipped to the back */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: scroll;
+    }
+    
+    .summary-text {
+      margin-top: 30px;
+      padding: 20px;
+      text-align: left;
+      text-justify: distribute;
+      font-family: 'Special Elite', cursive;
+      
+    }
+    
+    .box:hover .box-front {
+      transform: rotateY(180deg); /* Flips to the back on hover */
+    }
+    .box:hover .box-back {
+      transform: rotateY(0); /* Flips to the front on hover */
+    }
+    .card figcaption {
+      grid-column: 1/2;
+      grid-row: 2/5;
+      display: grid;
+      /* box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.5); */
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      border-radius: 10%;
+    }
+    .more-about {
+      flex-direction: column;
+    }
+  
+    .skill-logo {
+      order: 2; 
+      width: 100%;
+      margin-top: 10px; 
+    }
+  
+    .more-left {
+      order: 1; 
+      width: 100%; 
+    }
+  }
+ 
