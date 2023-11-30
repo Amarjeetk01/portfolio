@@ -125,3 +125,40 @@ const options = { weekday: 'long', month: 'long', day: 'numeric' };
 const today = new Date();
 const kindOfDay = today.toLocaleDateString("en-US", options);
 document.getElementById('kindOfDay').innerText = kindOfDay;
+
+// load more
+document.addEventListener('DOMContentLoaded', function () {
+  const projects = document.querySelectorAll('.project');
+  const loadMoreButton = document.getElementById('loadMoreButton');
+  const projectsPerPage = 3;
+  let visibleProjects = projectsPerPage;
+
+  // Initially hide projects beyond the first page
+  hideProjects();
+
+  loadMoreButton.addEventListener('click', function () {
+      visibleProjects += projectsPerPage;
+      updateVisibility();
+
+      // Hide the "Load More" button if there are no more projects to show
+      if (visibleProjects >= projects.length) {
+          loadMoreButton.style.display = 'none';
+      }
+  });
+
+  function hideProjects() {
+      projects.forEach((project, index) => {
+          if (index >= visibleProjects) {
+              project.style.display = 'none';
+          }
+      });
+  }
+
+  function updateVisibility() {
+      projects.forEach((project, index) => {
+          if (index < visibleProjects) {
+              project.style.display = 'grid'; // Assuming 'grid' is the default display for your projects
+          }
+      });
+  }
+});
