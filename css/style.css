@@ -754,7 +754,7 @@ gap: 24px;
   margin-top: 20px;
 }
 
-/* #loadMoreButton {
+#loadMoreButton {
   padding: 10px 20px;
   font-size: 1rem;
   background-color: #28666e;
@@ -766,8 +766,8 @@ gap: 24px;
 }
 
 #loadMoreButton:hover {
-  background-color: #1c4d54;
-} */
+  background-color: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25);
+}
 
 #loadMoreButton {
   background-color: #c2fbd7;
